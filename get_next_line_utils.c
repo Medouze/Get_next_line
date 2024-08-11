@@ -6,7 +6,7 @@
 /*   By: mlavergn <mlavergn@s19.be>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/10 19:29:18 by mlavergn          #+#    #+#             */
-/*   Updated: 2024/08/11 08:16:18 by mlavergn         ###   ########.fr       */
+/*   Updated: 2024/08/11 08:39:02 by mlavergn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,13 +78,16 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	return (ft_strlen(src));
 }
 
-void	initialise_stash(char **stash)
+char	*ft_strchr(const char *s, int c)
 {
-	if (!(*stash))
-    {
-        *stash = malloc(1);
-        if (!*(stash))
-            return ;
-        (*stash)[0] = '\0';
-    }
+	size_t	i;
+
+	i = 0;
+	while (s[i] != (char)(c))
+	{
+		if (s[i] == 0)
+			return (NULL);
+		i++;
+	}
+	return ((char *)s + i);
 }
