@@ -3,10 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
+<<<<<<< HEAD
 /*   By: mlavergn <mlavergn@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/10 19:05:50 by mlavergn          #+#    #+#             */
 /*   Updated: 2024/10/29 15:55:56 by mlavergn         ###   ########.fr       */
+=======
+/*   By: mlavergn <mlavergn@s19.be>                 +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/08/10 19:05:50 by mlavergn          #+#    #+#             */
+/*   Updated: 2024/08/11 08:39:15 by mlavergn         ###   ########.fr       */
+>>>>>>> 20f667f612ffcb45b9788871985caa345563e07e
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +47,11 @@ void	fill_stash(int fd, char **stash)
 		if (bytes_read == -1)
 		{
 			free(buf);
+<<<<<<< HEAD
 			free(*stash);
 			*stash = NULL;
+=======
+>>>>>>> 20f667f612ffcb45b9788871985caa345563e07e
 			return ;
 		}
 		buf[bytes_read] = '\0';
